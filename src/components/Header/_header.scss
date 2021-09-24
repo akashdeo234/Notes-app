@@ -1,0 +1,17 @@
+@import "/src/Commonstyles/variables";
+
+.header {
+  width: 100%;
+  height: 100px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-size: 37px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+   
+  }
+}
