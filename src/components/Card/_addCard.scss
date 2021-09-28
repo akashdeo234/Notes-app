@@ -1,43 +1,76 @@
 @import "/src/Commonstyles/variables";
-.add-card{
-    background-color: $special-color-two;
-    color: $primary-color;
-    min-width: 500px;
-    min-height: 350px;
-    padding: 50px;
+.add-card {
+  background-color: $special-color-two;
+  color: $primary-color;
+  min-width: 500px;
+  min-height: 350px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0% auto;
+  justify-content: center;
+  .top {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    .top{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        textarea{
-            padding: 15px 20px 0 ;
-            width: 100%;
-            resize: none;
-            border-radius: 10px;
-        }
-        textarea:focus{
-            outline: none;
-        }
-        .context-txt{
-            height: 100px;
-        }
-
+    gap: 15px;
+    textarea {
+      padding: 15px 20px 0;
+      width: 100%;
+      resize: none;
+      border-radius: 10px;
     }
-    .bottom{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 70px;
+    textarea:focus {
+      outline: none;
+    }
+    .context-txt {
+      height: 100px;
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 70px;
+    .btn {
+      margin-left: auto;
+      background-color: $secondary-color;
+      padding: 10px 30px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+}
+/*mobie*/
+@media (max-width: 767px) {
+  .add-card {
+    padding: 30px;
+    max-width: 310px;
+    .top {
+      textarea {
+        width: 63%;
+        margin: 0 auto;
+        margin-left: 80px;
+      }
+      .context-txt{
+          height: 200px;
+      }
+    }
+
+    .bottom {
         .btn{
-            margin-left: auto;
-            background-color: $secondary-color;
-            padding: 10px 30px;
-            border-radius: 15px;
-            cursor: pointer;
-           
+            margin-left: 50%;
+            padding: 10px 65px;
+            transform: translateX(-50%);
         }
+    }
+  }
+}
+
+/*Ipad*/ 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .add-card{
+        height: auto;
+        padding-bottom: 25px;
     }
 }
