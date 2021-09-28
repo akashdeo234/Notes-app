@@ -1,0 +1,34 @@
+@import "/src/Commonstyles/variables";
+.card{
+    background-color: $special-color-one;
+    color: $primary-color;
+    max-width: 500px;
+    max-height: 350px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .top{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        h1{
+            font-size: 40px;
+        }
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 70px;
+        max-width: 400px;
+        .btn{
+            background-color: $secondary-color;
+            padding: 10px 30px;
+            border-radius: 15px;
+            cursor: pointer;
+           
+        }
+    }
+}

@@ -1,12 +1,46 @@
 @import "/src/Commonstyles/variables";
 
-.main-sec{
-    background-color:$secondary-color;
-    color: $primary-color;
-    height: 100vh;
-    width: 100%;
+/*Common styles*/
+.main-sec {
+  height: auto;
+  width: 100%;
+  padding-bottom: 100px;
+  .container {
+    padding-top: 60px;
+    .input-field {
+      display: flex;
+      width: 50%;
+      margin: 0% auto;
+      height: 50px;
+      padding: 25px 40px;
+      border-radius: 40px;
+      outline: none;
+      border: none;
+      margin-bottom: 80px;
+    }
+  }
 }
-.main-sec.dark{
-    background-color:$primary-color;
-    color: $secondary-color;
+/*Dark mood styles*/
+.main-sec.dark-mode {
+  background-color: $primary-color;
+  color: $secondary-color;
+  .container {
+    .input-field {
+      background-color: $secondary-color;
+      color: $primary-color;
+      margin-bottom: 80px;
+    }
+  }
+
+}
+/*Dark mood styles*/
+.main-sec.light-mode {
+  background-color: $secondary-color;
+  color: $primary-color;
+  .container {
+    .input-field {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
 }

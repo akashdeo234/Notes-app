@@ -1,0 +1,43 @@
+@import "/src/Commonstyles/variables";
+.add-card{
+    background-color: $special-color-two;
+    color: $primary-color;
+    min-width: 500px;
+    min-height: 350px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .top{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        textarea{
+            padding: 15px 20px 0 ;
+            width: 100%;
+            resize: none;
+            border-radius: 10px;
+        }
+        textarea:focus{
+            outline: none;
+        }
+        .context-txt{
+            height: 100px;
+        }
+
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 70px;
+        .btn{
+            margin-left: auto;
+            background-color: $secondary-color;
+            padding: 10px 30px;
+            border-radius: 15px;
+            cursor: pointer;
+           
+        }
+    }
+}

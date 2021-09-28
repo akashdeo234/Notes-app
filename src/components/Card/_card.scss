@@ -1,0 +1,24 @@
+.card-wrapper{
+    width: 80%;
+    margin: 0% auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    overflow: hidden;
+    grid-gap: 50px 0px;
+    justify-items: center;
+}
+/*mobie*/
+@media (max-width: 767px) {
+    .card-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+/*ipad*/
+@media (max-width: 1200px) {
+    .card-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
