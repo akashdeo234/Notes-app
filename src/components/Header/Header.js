@@ -1,11 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./_header.scss";
 import Switch from "@mui/material/Switch";
-import { colorMoodContext } from "../../Context/Context";
+import { colorMoodContext, UserContextFun } from "../../Context/Context";
+import { Link } from "react-router-dom";
+import {firebase} from '../../firebase/firebase'
 
 function Header() {
   const { setColor } = useContext(colorMoodContext); //useContext state for color change
   const [current, setCurrent] = useState(true); // state to get the toogle is true or false
+  const { user , setUser } = useContext(UserContextFun);
   const label = { inputProps: { "aria-label": "Switch demo" } };
   const colorChange = () => {
     setCurrent(!current);
@@ -27,6 +30,12 @@ function Header() {
   const toogleFalse = {
     color: "#3269FF"
 }
+
+useEffect(()=>{
+  firebase.auth().onAuthStateChanged((user)=>{
+    setUser(user);
+  })
+},[])
   return (
     <div className="header" style={current ? darkMode : lightMode}>
       <div className="container">
@@ -34,6 +43,9 @@ function Header() {
           <span>N</span>otes
         </h1>
         <div className="toogle-btn">
+          <Link to='/signup' className={`${current && "login-btn"} : ${!current && "dark-login-btn"}  `}>
+            {user ? user.displayName : 'Login'}
+          </Link>
           <Switch {...label} onChange={colorChange} className='btn' style={current ? toogleTrue : toogleFalse } />
         </div>
       </div>

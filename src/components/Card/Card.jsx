@@ -1,5 +1,4 @@
-import { nanoid } from 'nanoid';
-import React, { useState } from 'react'
+import React from 'react'
 import AddCard from './AddCard';
 import IndivitualCards from './IndivitualCards';
 import './_card.scss';
